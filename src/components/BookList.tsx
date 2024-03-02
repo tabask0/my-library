@@ -120,22 +120,22 @@ const BookList = () => {
   );
 
   const bookCards = (
-    <Box
+    <div
+      className="flex flex-col md:flex-row"
       style={{
-        display: "flex",
-        flexDirection: "row",
         alignItems: "center",
         alignContent: "center",
       }}
     >
       {books?.map((book: Book) => (
         <BookCard
+          key={book.id}
           book={book}
           handleEditClick={handleRowClick}
           handleDeleteClick={handleDeleteClick}
         />
       ))}
-    </Box>
+    </div>
   );
 
   if (error) return <div>Failed to load</div>;

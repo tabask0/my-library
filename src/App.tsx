@@ -30,7 +30,7 @@ function App() {
         <IconButton
           onClick={toggleTheme}
           style={{
-            position: "absolute",
+            position: "fixed",
             bottom: "15px",
             right: "15px",
             backgroundColor: theme.palette.background.paper,
